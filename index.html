@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clicker App</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen p-4">
+  <header class="my-6 text-center">
+    <h1 class="text-4xl font-bold text-indigo-700">🖱️ Clicker App</h1>
+    <p class="text-gray-600 mt-2">Tap the button, earn points, and buy upgrades!</p>
+  </header>
+
+  <main class="w-full max-w-md bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+    <!-- Counter -->
+    <div class="text-3xl font-semibold mb-4" id="counter">0</div>
+
+    <!-- Click button -->
+    <button id="clickBtn"
+            class="w-48 h-16 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full transition transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-400 mb-6">
+      Click Me!
+    </button>
+
+    <!-- Upgrades -->
+    <section class="w-full">
+      <h2 class="text-xl font-medium text-gray-800 mb-3">Upgrades</h2>
+
+      <!-- Click Multiplier Upgrade -->
+      <div class="flex justify-between items-center bg-gray-50 p-3 rounded mb-3">
+        <div>
+          <p class="font-medium">Click Power (+1 per click)</p>
+          <p class="text-sm text-gray-500" id="multiplierCost">Cost: 10</p>
+        </div>
+        <button id="buyMultiplier"
+                class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50 disabled:cursor-not-allowed">
+          Buy
+        </button>
+      </div>
+
+      <!-- Auto‑Clicker Upgrade -->
+      <div class="flex justify-between items-center bg-gray-50 p-3 rounded">
+        <div>
+          <p class="font-medium">Auto‑Clicker (+1 per sec)</p>
+          <p class="text-sm text-gray-500" id="autoclickerCost">Cost: 50</p>
+        </div>
+        <button id="buyAutoClicker"
+                class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50 disabled:cursor-not-allowed">
+          Buy
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-8 text-center text-gray-500 text-sm">
+    © 2026 Clicker App – Open Source
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
